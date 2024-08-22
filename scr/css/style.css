@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+    background: black;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  justify-content: center;
+  list-style: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.navigation{
+    position: fixed;
+    z-index: 1;
+    opacity: 0.4;
+    background:  #5a3123!important;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s all;
+    padding: 18px 40px;
+    box-shadow: #5a3123 10px 20px 100px;
+}
+
+.logo img{
+    width: 30%;
+}
+
+.navigation ul{
+    list-style: none;
+    display: flex;
+    margin-left: 25%;
+    align-items: center;
+    gap: 10rem;
+}
+
+.navigation ul li a{
+    font-size: 17px;
+    transition: 0.5s all;
+    color: white;
+}
+
+.navigation ul li a:hover{
+    transition: 0.5s all;
+    opacity: 1;
+    letter-spacing: 1px;
+    text-decoration: overline;
+}
+
+.navigation i{
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.menu{
+    cursor: pointer;
+    display: none;
+}
+
+.menu .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: white;
+    margin: 5px auto;
+    transition: 0.3s all;
+}
+
+
+ /* Nav mobile */
+
+ @media (max-width: 785px) {
+    
+    .navigation{
+        padding: 20px 150px;
+        margin-left: -50px;
+      }
+  
+      .menu{
+        display: block;
+      }
+  
+      .menu.ativo .bar:nth-child(1){
+        background: red; 
+          transform:  translateY(8px)  rotate(45deg);
+      }
+  
+      .menu.ativo .bar:nth-child(2){
+        opacity: 0;
+      }
+  
+      .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg); 
+        background: red;
+      }
+  
+      .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 30%;
+        height: 100%;
+        flex-direction: column;
+        background: var(--nav-bg-color);
+        gap: -5px;
+        transition: 0.3s all;
+        z-index:1;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+  
+      .nav-menu.ativo{
+        right: 0;
+      }
+  
+      .nav-item{
+        margin: 16px 0;
+      }
+       
+  }
+
+.main h1{
+    z-index: 2;
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    text-align: center;
+    color: white;
+    font-size: 68px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.main a{
+    position: absolute;
+    top: 55%;
+    left: 43%;
+    color: white;
+    z-index: 3;
+    padding: 10px 80px 10px;
+    border-radius   : 20px;
+    background: #c62126;
+    transform: 0.3s all;
+}
+
+.main a:hover{
+    transition: 0.3s all;
+    transform: scaleX(1.04);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+
+.fundo img{
+    width: 100%;
+    height: 100vh;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 160px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 136px -18px inset;
+    box-shadow: #5a3123 10px 20px 300px;
+}
+
+
+.trailer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px;
+}
+
+.text h2{
+    color: rgb(130, 130, 130);
+    text-align: left;
+    max-width: 650px;
+}
+
+.embed iframe{
+    width: 650px;
+    height: 350px;
+    box-shadow: #5a3123 10px 20px 300px;
+}
+
+.sobre{
+    padding: 80px;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-sobre img{
+    border-radius: 180px;
+    box-shadow: #5a3123 10px 10px 100px;
+}
+
+
+.text-sobre h3{
+    color: rgb(130, 130, 130);
+    max-width: 750px;
+    text-align: right;
+    font-size: 22px;
+}
+
+.movie embed{
+    width: 80%;
+    height: 80vh;
+    border-radius: 60px;
+    box-shadow: #5a3123 10px 10px 200px 0px;
+}
